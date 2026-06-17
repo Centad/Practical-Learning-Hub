@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Practical Learning Solutions"
+version = "1.0.0"
+id = "artifacts/practical-learning"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24183
+
+[services.development]
+run = "pnpm --filter @workspace/practical-learning run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/practical-learning", "run", "build" ]
+publicDir = "artifacts/practical-learning/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24183"
+BASE_PATH = "/"
