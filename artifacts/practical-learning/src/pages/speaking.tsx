@@ -40,7 +40,7 @@ export default function Speaking() {
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center pt-20 overflow-hidden bg-foreground">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-foreground/80 mix-blend-multiply z-10" />
+          <div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(to right, hsl(var(--foreground)) 35%, hsl(var(--foreground) / 0.6) 60%, transparent 85%)' }} />
           <img 
             src={stageImg} 
             alt="Dr. Witherspoon speaking on stage with purple lighting" 
