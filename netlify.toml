@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm install && pnpm --filter @workspace/practical-learning run build"
+  publish = "artifacts/practical-learning/dist/public"
+
+[build.environment]
+  BASE_PATH = "/"
+  PORT = "8080"
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
