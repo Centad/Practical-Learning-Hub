@@ -1,3 +1,4 @@
+# Practical Learning Hub - Netlify config
 [build]
   command = "pnpm install && pnpm --filter @workspace/practical-learning run build"
   publish = "artifacts/practical-learning/dist/public"
